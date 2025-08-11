@@ -14,3 +14,7 @@ h1{
     text-align: center;
     color: green;
 }
+button{
+    margin: 12px;
+    margin-top: 0.01px;
+}

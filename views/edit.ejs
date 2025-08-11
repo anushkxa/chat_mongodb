@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body style="text-align: center;">
+    <h3 style="margin-top:10%; color: green;">Edit your Chat: <%= edd._id %></h3>
+    <p style="color: rgb(1, 84, 1);"> This chat was sent from <%= edd.from %> to <%= edd.to %></p>
+    <form action="/chats/<%= edd._id %>?_method=PUT" method="POST">
+        <textarea name="msg" rows="3" cols="20" style="color: black;">
+            <%= edd.msg %>
+        </textarea>
+        <br>
+        <button style="background-color:rgb(18, 53, 11);color: white; border-radius: 10px; width: 66px;margin-top: 0.8%;">Edit</button>
+    </form>
+</body>
+</html>

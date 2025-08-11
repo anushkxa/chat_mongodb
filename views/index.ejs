@@ -18,8 +18,16 @@
         <p>To: <%= chat.to  %></p>
         <div class="msg">
             <p><%= chat.msg  %></p>
+            <form method="GET" action="/chats/<%=chat._id%>">  
+                <button>EDIT!</button>
+            </form><br>
+            <form method="POST" action="/chats/<%=chat._id%>?_method=DELETE">  
+                <button>DELETE</button>
+            </form>
         </div>
         <p>Created At: <%= chat.created_at  %></p>
+
+
         <hr>
     </div>
     <%}%>
